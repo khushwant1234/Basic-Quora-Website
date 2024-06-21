@@ -1,0 +1,47 @@
+.post {
+    height: 150px;
+    background-color: pink;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-style: italic;
+}
+
+h1 {
+    color: maroon;
+}
+
+#newPostButton {
+    background-color: maroon;
+    color: wheat;
+}
+
+#content {
+    height: 100px;
+    width: 200px;
+}
+
+.input {
+    padding: 5px;
+}
+
+.input input {
+    background-color: wheat;
+    
+}
+
+.input h3 {
+    color: maroon;
+    font-style: bold;
+}
+
+
+#postButton {
+    margin: 5px;
+    margin-top: 10px;
+    background-color: maroon;
+    color: wheat;
+}
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Content</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <h3>Post ID: <%= post.id %> </h3>
+    <h3>User: @<%= post.username %> </h3>
+    <form method="post" autocomplete="off" action="/posts/<%=post.id%>?_method=PATCH">
+        <div class="input">
+            <h3>Enter New Content:</h3>
+            <textarea name="content" id="content"> <%= post.content %> </textarea>
+        </div>
+        <button id="postButton">Save Changes</button>
+    </form>
+    <a href="http://localhost:8080/posts">Cancel</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <h1>QUORA</h1>
+    <h2>Welcome to your Feed</h2>
+    <% for (let post of posts) { %>
+        <div class="post">
+        <h3 class="username"> @<%= post.username %> </h3>
+        <p class="content"> <%= post.content  %> </p>
+        <a href="http://localhost:8080/posts/<%=post.id%>">...see more</a>
+        <a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit Content</a>
+        <br>
+        <br>
+        <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+            <button>DELETE POST</button>
+        </form>
+        </div>
+    <% } %>
+    <hr>
+    <form action="/posts/new">
+        <button id="newPostButton">New Post</button>
+    </form>
+    
+</body>
+<script src="/feed.js"></script>
+</html>
